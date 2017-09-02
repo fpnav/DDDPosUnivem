@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPosUnivem.Domain", "DDDP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPosUnivem.Infra.Data", "DDDPosUnivem.Infra.Data\DDDPosUnivem.Infra.Data.csproj", "{AFF7B5A1-9EF8-4902-9519-1613F311C657}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPosUnivem.Application", "DDDPosUnivem.Application\DDDPosUnivem.Application.csproj", "{86F1B4A1-E4A2-443B-9621-C1D9DD4B8751}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{AFF7B5A1-9EF8-4902-9519-1613F311C657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF7B5A1-9EF8-4902-9519-1613F311C657}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF7B5A1-9EF8-4902-9519-1613F311C657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F1B4A1-E4A2-443B-9621-C1D9DD4B8751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F1B4A1-E4A2-443B-9621-C1D9DD4B8751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F1B4A1-E4A2-443B-9621-C1D9DD4B8751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F1B4A1-E4A2-443B-9621-C1D9DD4B8751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,5 +49,6 @@ Global
 		{7D1BEE60-EA3E-495D-B59F-C4B105293440} = {368BE4D3-BAC1-4002-AE75-BDD422467B49}
 		{DEED67EE-DBB2-4F3A-98CD-AF367DCB4DCF} = {8278902D-CD36-4A77-9A7F-FB8C16AE18EE}
 		{AFF7B5A1-9EF8-4902-9519-1613F311C657} = {407A1FA7-14CE-4D6E-B531-1A0C26E3DB31}
+		{86F1B4A1-E4A2-443B-9621-C1D9DD4B8751} = {1DA8F9FA-3E48-47C3-AF43-3ECF183B4160}
 	EndGlobalSection
 EndGlobal

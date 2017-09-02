@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using DDDPosUnivem.Application.Interfaces;
 using DDDPosUnivem.Domain.Entities;
+using DDDPosUnivem.Domain.Interfaces.Services;
 using DDDPosUnivem.Infra.Data.Repositories;
 using DDDPosUnivem.MVC.ViewModels;
 using System;
@@ -12,13 +14,26 @@ namespace DDDPosUnivem.MVC.Controllers
 {
     public class ClientesController : Controller
     {
-        private readonly ClienteRepository _clienteRepository = new ClienteRepository();
+        //Old School - chamando direto da infra/Repositórios
+        //private readonly ClienteRepository _clienteRepository = new ClienteRepository();
+
+        //Old School - chamando direto da camada de serviço no domain
+        //private readonly IClienteService _clienteService;
+
+        private readonly IClienteAppService _clienteAppService;
+
+
+        public ClientesController(IClienteAppService clienteService)
+        {
+            //NINJECT - DI
+            _clienteAppService = clienteService;
+        }
         
         // GET: Clientes
         public ActionResult Index()
         {
             var clientesViewModel = Mapper.Map<IEnumerable<Cliente>, 
-                IEnumerable<ClienteViewModel>>(_clienteRepository.GetAll());
+                IEnumerable<ClienteViewModel>>(_clienteAppService.GetAll());
             return View(clientesViewModel);
         }
 
@@ -41,7 +56,7 @@ namespace DDDPosUnivem.MVC.Controllers
             if (ModelState.IsValid)
             {
                 var clientModel = Mapper.Map<ClienteViewModel, Cliente>(cliente);
-                _clienteRepository.Add(clientModel);
+                _clienteAppService.Add(clientModel);
                 return RedirectToAction("Index");
             }
             return View(cliente);
