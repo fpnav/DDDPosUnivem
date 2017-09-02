@@ -5,14 +5,11 @@ namespace DDDPosUnivem.Infra.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration 
-        : DbMigrationsConfiguration<DDDPosUnivem.Infra.Data.Context.DDDContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DDDPosUnivem.Infra.Data.Context.DDDContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            //DANGER - somente em ambiente de desenvolvimento
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(DDDPosUnivem.Infra.Data.Context.DDDContext context)
